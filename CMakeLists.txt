@@ -24,6 +24,9 @@ endif ()
 add_library ( ev ${EV_SRC} )
 target_link_libraries ( ev ${EV_LIBS} )
 
+add_library ( ev_static STATIC ${EV_SRC} )
+target_link_libraries ( ev_static ${EV_LIBS} )
+
 install_library ( ev )
 install_header ( ev.h ev++.h event.h )
 install_data ( LICENSE README )
